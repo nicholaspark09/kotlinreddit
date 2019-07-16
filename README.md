@@ -21,3 +21,6 @@ The app is architected in a fashion that allows for implementation to change
  - Kotlin is the language en-vogue and Google doesn't want any more lawsuits
  - Everyone wants it
 
+### Application Architecture
+ - The app will be architected using the MVVM architecture
+ - The business logic will live in the ViewModels or the Repositories

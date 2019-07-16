@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">networking</string>
+    <string name="networking_endpoint" translatable="false">https://www.reddit.com/</string>
 </resources>

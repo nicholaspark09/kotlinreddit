@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="connect_timeout">30</integer>
+    <integer name="read_timeout">30</integer>
+    <integer name="write_timeout">30</integer>
+
+    <!-- Bools -->
+    <bool name="networking_debug_enabled">true</bool>
+</resources>

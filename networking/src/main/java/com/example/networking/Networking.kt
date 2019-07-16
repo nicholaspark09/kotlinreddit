@@ -2,10 +2,23 @@ package com.example.networking
 
 import android.annotation.SuppressLint
 import android.content.Context
+import com.example.networking.di.NetworkModule
+import com.example.networking.di.PersistenceModule
+import com.example.networking.repo.RedditDataSource
+import com.example.networking.repo.RedditRepository
 
 class Networking private constructor(
-    val context: Context
+    val context: Context,
+    val networkModule: NetworkModule = NetworkModule.get(context)
 ) {
+
+    val persistenceModule: PersistenceModule by lazy { PersistenceModule.get(context) }
+    val redditRepository: RedditDataSource by lazy {
+        RedditRepository(
+            networkModule.redditApi,
+            persistenceModule.redditPersistence
+        )
+    }
 
     companion object {
 

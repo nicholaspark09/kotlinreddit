@@ -7,13 +7,11 @@ import com.example.networking.data.RedditPost
 import com.google.gson.Gson
 import io.reactivex.Single
 
-internal const val SHARED_KEY = "key:shared_networking"
 internal const val KEY_POST = "key:post_"
 
 class RedditPersistence(
-    val context: Context,
-    val gson: Gson = Gson(),
-    val sharedPreferences: SharedPreferences = context.getSharedPreferences(SHARED_KEY, MODE_PRIVATE)
+    val gson: Gson,
+    val sharedPreferences: SharedPreferences
 ) : RedditPersistenceContract {
 
     override fun savePost(post: RedditPost) {

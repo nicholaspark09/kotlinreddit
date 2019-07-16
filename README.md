@@ -1,13 +1,14 @@
 ## Kotlin Reddit
 A basic app done in kotlin to help me practice and keep in touch
 
-### Organization
+### Networking
 The app is architected in a fashion that allows for implementation to change
  - The networking is done in a networking module
  - The networking module does not contain dagger so that downstream dependencies
    can use whatever versions of android they want
  - The networking module is accessed and used via interfaces created a relatively
    non-volatile upstream dependency
+ - The networking library when built as an aar is only 34kb...pretty darn small
 
 ### Dependency Injection
  - As I'm excluding dagger in the networking module, dependency injection is done

@@ -26,9 +26,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":networking")
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation (
+    implementation(
             android.appCompat,
             android.constraintLayout,
+            android.recyclerView,
 
             // Dagger
             dagger.base,
@@ -37,7 +38,10 @@ dependencies {
 
             // Rx
             rxjava.base,
-            rxjava.android
+            rxjava.android,
+
+            // Architecture Components
+            lifecycle.extensions
     )
 
     kapt(

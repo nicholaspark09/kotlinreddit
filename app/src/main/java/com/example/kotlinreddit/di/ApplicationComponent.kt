@@ -3,6 +3,7 @@ package com.example.kotlinreddit.di
 import android.app.Application
 import com.example.kotlinreddit.KotlinReddit
 import com.example.kotlinreddit.di.module.AppModule
+import com.example.kotlinreddit.di.module.MainActivityModule
 import com.example.networking.repo.RedditDataSource
 import dagger.BindsInstance
 import dagger.Component
@@ -13,7 +14,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidInjectionModule::class,
-        AppModule::class
+        AppModule::class,
+        MainActivityModule::class
     ]
 )
 interface ApplicationComponent {

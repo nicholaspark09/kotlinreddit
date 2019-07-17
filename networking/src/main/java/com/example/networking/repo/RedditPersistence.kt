@@ -1,7 +1,5 @@
 package com.example.networking.repo
 
-import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import com.example.networking.data.RedditPost
 import com.google.gson.Gson
